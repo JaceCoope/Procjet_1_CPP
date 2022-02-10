@@ -95,7 +95,8 @@ int main ( ) {
 	cout << endl;
 
 //Find most active user
-	int mostAct = ___
+	int mostAct = 0;
+
 	cout << "Most active user: " << mostAct << endl;
 	cout << endl;
 
