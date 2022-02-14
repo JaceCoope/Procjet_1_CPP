@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Users/Coope/Desktop/Comp$ Sci$ 3$ The$ Compening/Procj
 
 build cmake_object_order_depends_target_Procjet_1_CPP: phony || CMakeFiles/Procjet_1_CPP.dir
 
-build CMakeFiles/Procjet_1_CPP.dir/template1.cpp.obj: CXX_COMPILER__Procjet_1_CPP_Debug C$:/Users/Coope/Desktop/Comp$ Sci$ 3$ The$ Compening/Procjet_1_CPP/template1.cpp || cmake_object_order_depends_target_Procjet_1_CPP
-  DEP_FILE = CMakeFiles\Procjet_1_CPP.dir\template1.cpp.obj.d
+build CMakeFiles/Procjet_1_CPP.dir/HW1_CS2413.cpp.obj: CXX_COMPILER__Procjet_1_CPP_Debug C$:/Users/Coope/Desktop/Comp$ Sci$ 3$ The$ Compening/Procjet_1_CPP/HW1_CS2413.cpp || cmake_object_order_depends_target_Procjet_1_CPP
+  DEP_FILE = CMakeFiles\Procjet_1_CPP.dir\HW1_CS2413.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Procjet_1_CPP.dir
   OBJECT_FILE_DIR = CMakeFiles\Procjet_1_CPP.dir
@@ -63,7 +63,7 @@ build CMakeFiles/Procjet_1_CPP.dir/template1.cpp.obj: CXX_COMPILER__Procjet_1_CP
 #############################################
 # Link the executable Procjet_1_CPP.exe
 
-build Procjet_1_CPP.exe: CXX_EXECUTABLE_LINKER__Procjet_1_CPP_Debug CMakeFiles/Procjet_1_CPP.dir/template1.cpp.obj
+build Procjet_1_CPP.exe: CXX_EXECUTABLE_LINKER__Procjet_1_CPP_Debug CMakeFiles/Procjet_1_CPP.dir/HW1_CS2413.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Procjet_1_CPP.dir

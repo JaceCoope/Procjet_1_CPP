@@ -4,4 +4,4 @@ project(Procjet_1_CPP)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Procjet_1_CPP
-        template1.cpp)
+        HW1_CS2413.cpp)
