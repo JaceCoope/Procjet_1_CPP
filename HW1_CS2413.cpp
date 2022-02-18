@@ -56,19 +56,12 @@ void CRM::addRow(int row)
 {
     if(row == rowStart)
     {
-        //do freaking nothing
-    }
-    else if (row == rowStart++)
-    {
-        rowPos[rowIterate] = row;
-        rowStart = row;
-        rowIterate++;
+        //Do nothing
     }
     else
     {
-        rowPos[rowIterate] = -1;
-        rowStart = row;
-        rowIterate++;
+
+        addRow(row);
     }
 }
 void CRM::addColumn(int col)
