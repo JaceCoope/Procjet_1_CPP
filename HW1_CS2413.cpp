@@ -28,7 +28,7 @@ public:
 };
 
 int iterateNum; //global integer to keep track of values index
-int rowStart = -1; //global integer to keep track of row input
+int rowStart = 0; //global integer to keep track of row input
 int rowIterate = 0; //global integer to keep track of rows index
 
 
@@ -54,20 +54,58 @@ void CRM::addValue(int value)
 }
 void CRM::addRow(int row)
 {
-    if(row == rowStart)
+    if(row == 0)
+    {
+        rowPos[iterateNum] = row;
+    }
+    else if(row == rowStart)
     {
         //Do nothing
     }
+    else if(row == (++rowStart))
+    {
+        rowIterate++;
+        rowPos[rowIterate] = row;
+        rowStart = row;
+    }
     else
     {
-
+        rowPos[rowIterate] = -1;
+        rowStart++;
         addRow(row);
     }
 }
+
 void CRM::addColumn(int col)
 {
-
+    colPos[iterateNum] = col;
 }
+
+void CRM::display()
+{
+    cout << "values:";
+    int valArrSize = sizeof(values)/sizeof(*values);
+    for(int i = 0; i < valArrSize; i++)
+    {
+        cout << " " << values[i];
+    }
+    cout << endl;
+
+    cout << "rowPos:";
+    for(int i = 0; i < sizeof(values); i++)
+    {
+        cout << " " << rowPos[i];
+    }
+    cout << endl;
+
+    cout << "colPos:";
+    for(int i = 0; i < sizeof(values); i++)
+    {
+        cout << " " << colPos[i];
+    }
+    cout << endl;
+}
+
 int CRM::mostInfluentialUser(){
     return 0;
 };
@@ -76,7 +114,7 @@ int* CRM::influentialUsers (){
 
     for (int i=0; i < n; i++) outputVector[i] =0;
 
-//fill in the code
+    //fill in the code
 
     return outputVector;
 }
@@ -107,7 +145,7 @@ int main ( ) {
     cin >> numNonZeros;
 
     A = new CRM (numRows, numColumns, numNonZeros);
-    for (int i=0; i < numRows; i++) {
+    for (int i=0; i < numNonZeros; i++) {
         iterateNum = i;
         cin >> row >> col >> value;
         (*A).addValue (value);
@@ -117,7 +155,7 @@ int main ( ) {
     (*A).display ( );
 
 //Find most influential user
-    int mostInf = (*A).mostInfluentialUser ();
+ /*   int mostInf = (*A).mostInfluentialUser ();
     cout << "Most influential user: " << mostInf << endl;
     cout << endl;
 
@@ -145,6 +183,6 @@ int main ( ) {
     delete A;
     delete [ ] influentialityVector;
     A->~CRM();
-
+*/
     return 0;
 }
